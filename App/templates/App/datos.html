@@ -1,0 +1,24 @@
+{% extends "App/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+<div style="background-color:#8e927d5b;">   
+  <h2>Ingrese sus datos</h2>
+   {% if miFormulario.errors %}
+   
+   <p style="color:red;"> Están mal los datos</p>
+    
+   {% endif %}
+   <form action="" method="POST">{% csrf_token %} 
+       <table>
+          {{ miFormulario.as_table }}
+       </table>
+      
+       <input type = "submit" value="Enviar">
+    
+   </form>
+ </div>  
+{% endblock %}

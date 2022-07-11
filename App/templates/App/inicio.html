@@ -1,0 +1,18 @@
+{% extends "App/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+
+{% if request.user.is_authenticated %}
+ <h1> {{mensaje}} </h1>
+  <br>
+  <h1><button> <a href="{% url 'Logout' %}"><p style="color:black">Cerrar sesión</p></a></button></h1>
+{% endif %}
+  
+  
+  
+  
+   
+{% endblock %}
+
+
+
